@@ -11,12 +11,14 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.*;
 
 /**
  * Created by Dto on 2/11/2015.
  */
+@CrossOrigin
 @Component
 @Profile("db.init")
 public class DatabaseInitializationBean implements InitializingBean {

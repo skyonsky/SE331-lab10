@@ -7,6 +7,7 @@ import org.imgscalr.Scalr;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -19,6 +20,7 @@ import java.util.List;
 /**
  * Created by Dto on 2/8/2015.
  */
+@CrossOrigin
 @Service
 public class ProductServiceImpl implements ProductService {
 
