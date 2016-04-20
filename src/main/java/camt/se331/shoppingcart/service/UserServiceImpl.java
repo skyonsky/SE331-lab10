@@ -3,14 +3,14 @@ package camt.se331.shoppingcart.service;
 import camt.se331.shoppingcart.entity.User;
 import camt.se331.shoppingcart.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
- * Created by SKY on 4/19/2016.
+ * Created by SKY on 4/20/2016.
  */
-@CrossOrigin
+@Service
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User findByUsername(String username) {
+    public User findByUserName(String username) {
         return userRepository.findByUsername(username);
     }
 }

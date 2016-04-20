@@ -1,43 +1,40 @@
 <div class="col-md-9 col-md-offset-4" ng-controller="LoginController as login">
-  <form class="form-inline" ng-hide="user">
-
+  <form ng-hide="user" class="form-inline">
     <div class="form-group">
-      <label for="username" class="col-sm-3">User Name:</label>
+      <label for="username" class="col-sm-3 control-label">User Name:</label>
       <div class="col-sm-3">
-        <input id="username" ng-model="login.username" type="text" class="form-control"/>
+        <input type="text" class="form-control" ng-model="login.username" id="username"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password" class="col-sm-3 control-label">Password:</label>
+      <div class="col-sm-3">
+        <input type="password" class="form-control" ng-model="login.password" id="password"/>
       </div>
     </div>
 
     <div class="form-group">
-      <label for="password" class="col-sm-3">Password:</label>
-      <div class="col-sm-3">
-        <input id="password" ng-model="login.password" type="password" class="form-control"/>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="col-sm-3">
+      <div class="col-sm-3 col-sm-offset-3">
         <input type="submit" value="Log In" class="btn btn-primary" ng-click="login.login()"/>
       </div>
-
-      <div class="form-group">
-      </div>
-      <div class="col-sm-offset-3 col-sm-3">
+    </div>
+    <div class="form-group">
+      <div class="col-sm-9 col-sm-offset-9">
         <div class="checkbox">
-          <label> Remember me</label>
-          <input type="checkbox" ng-model="login.rememberMe"/>
+          <label>
+            <input type="checkbox" ng-model="login.rememberMe"/> Remember Me
+          </label>
         </div>
       </div>
     </div>
-
   </form>
-  <form class="form-inline" ng-show="user">
+  <form ng-show="user" class="form-inline">
     <div class="H6 col-sm-5 col-sm-offset-3 text-right">
-      Hello!!! {{user.name}}
+      Hello !!! {{user.name}}
     </div>
-    <div class="form-group">
+    <div class="from-group">
       <div class="col-sm-3">
-        <input type="submit" value="Log out" class="btn btn-primary" ng-click="logout()"/>
+        <input type="submit" class="btn btn-primary" value="Log Out" ng-click="logout()"/>
       </div>
     </div>
   </form>

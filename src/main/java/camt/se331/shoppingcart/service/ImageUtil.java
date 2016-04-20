@@ -2,7 +2,6 @@ package camt.se331.shoppingcart.service;
 
 import camt.se331.shoppingcart.entity.Image;
 import org.imgscalr.Scalr;
-import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -14,7 +13,6 @@ import java.util.Calendar;
 /**
  * Created by Dto on 4/23/2015.
  */
-@CrossOrigin
 public class ImageUtil {
     static ImageUtil imageUtil = null;
     public static ImageUtil getInstance(){

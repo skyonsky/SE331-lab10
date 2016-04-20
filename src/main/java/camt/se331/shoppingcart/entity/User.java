@@ -2,7 +2,6 @@ package camt.se331.shoppingcart.entity;
 
 import org.hibernate.annotations.*;
 import org.hibernate.annotations.CascadeType;
-import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
 import javax.persistence.Entity;
@@ -11,33 +10,32 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by SKY on 4/19/2016.
+ * Created by SKY on 4/20/2016.
  */
 @Entity
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
     private String username;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     private String name;
     private String email;
     private String password;
     private Date dob;
+    @ManyToMany(fetch = FetchType.EAGER)
+    // Cascade and CascadeType must be the org.hibernate.annotation
+    @Cascade(CascadeType.ALL)
+    private Set<Role> roles = new HashSet<>();
 
-    public long getId() {
+    public User() {
+
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -47,6 +45,14 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -79,14 +85,5 @@ public class User {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
-    }
-
-    @ManyToMany(fetch = FetchType.EAGER)
-    // Cascade and CascadeType must be the org.hibernate.annotation
-    @Cascade(CascadeType.ALL)
-    private Set<Role> roles = new HashSet<>();
-
-    public User(){
-
     }
 }

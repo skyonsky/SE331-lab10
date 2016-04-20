@@ -11,13 +11,11 @@ import java.util.Collection;
 import java.util.Set;
 
 /**
- * Created by SKY on 4/19/2016.
+ * Created by Shine on 20/4/2559.
  */
 public class SecurityUser extends User implements UserDetails {
-    private static final long serialVersionUID = 1L;
-    public SecurityUser(User user){
-        super();
-        if (user != null){
+    public SecurityUser(User user) {
+        if(user != null) {
             this.setId(user.getId());
             this.setName(user.getName());
             this.setEmail(user.getEmail());
@@ -25,30 +23,21 @@ public class SecurityUser extends User implements UserDetails {
             this.setRoles(user.getRoles());
             this.setPassword(user.getPassword());
             this.setUsername(user.getUsername());
-
         }
     }
-
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         Collection<GrantedAuthority> authorities = new ArrayList<>();
         Set<Role> userRoles = this.getRoles();
-        if (userRoles != null){
-            for (Role role: userRoles){
+
+        if( userRoles != null ) {
+            for (Role role: userRoles) {
                 SimpleGrantedAuthority authority = new SimpleGrantedAuthority(role.getRoleName());
                 authorities.add(authority);
-                }
             }
+        }
         return authorities;
-    }
-
-    @Override
-    public String getUsername() {
-        return super.getUsername();
-    }
-    public String getPassword() {
-        return super.getPassword();
     }
 
     @Override
@@ -70,4 +59,13 @@ public class SecurityUser extends User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+    public String getUsername() {
+        return super.getUsername();
+    }
+
+    public String getPassword() {
+        return super.getPassword();
+    }
+
 }

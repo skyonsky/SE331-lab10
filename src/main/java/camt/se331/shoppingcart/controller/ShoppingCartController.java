@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 /**
  * Created by Dto on 4/6/2015.
  */
-
 @RestController
 @RequestMapping("/shoppingcart")
 @CrossOrigin

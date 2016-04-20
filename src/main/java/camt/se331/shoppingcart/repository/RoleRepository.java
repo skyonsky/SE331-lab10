@@ -1,14 +1,10 @@
 package camt.se331.shoppingcart.repository;
 
 import camt.se331.shoppingcart.entity.Role;
-import camt.se331.shoppingcart.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
- * Created by SKY on 4/19/2016.
+ * Created by SKY on 20/4/2559.
  */
-
-public interface RoleRepository extends JpaRepository<Role,Long>{
-
-
+public interface RoleRepository extends JpaRepository<Role,Long> {
 }

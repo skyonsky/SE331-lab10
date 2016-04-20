@@ -1,69 +1,67 @@
-    <!doctype html>
-    <html ng-app="app">
-    <head>
-      <meta charset="utf-8">
-      <title>app</title>
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width">
-      <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>app</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-      <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
-      <!-- bower:css -->
-      <!-- run `gulp inject` to automatically populate bower styles dependencies -->
-      <!-- endbower -->
-      <!-- endbuild -->
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
 
-      <!-- build:css({.tmp/serve,src}) styles/app.css -->
-      <!-- inject:css -->
-      <!-- css files will be automatically insert here -->
-      <!-- endinject -->
-      <!-- endbuild -->
-    </head>
-    <body>
-    <div class="page-header">
-      <h1>CAMT
-        <small>Software Component Based Software Development</small>
-      </h1>
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automatically insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+  </head>
+  <body>
+  <div class="page-header">
+    <h1>CAMT
+      <small>Software Component Based Software Development</small>
+    </h1>
 
-    </div>
-    <div class="navbar navbar-default" ng-controller="LanguageController">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse">
-          <div ng-include src="'app/security/login.html'"></div>
-          <ul class="nav navbar-nav navbar-right">
-            <li ng-class="{'active':currentLocale== 'en'}"><a href="" ng-click="changeLanguage('en')">EN </a></li>
-            <li ng-class="{'active':currentLocale== 'fr'}"><a href="" ng-click="changeLanguage('fr')">FR</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="container ng-hide" ng-show="initialized">
-      <div class="alert alert-danger" ng-show="error">{{error}}</div>
-    </div>
-
+  </div>
+  <div class="navbar navbar-default" ng-controller="LanguageController">
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-2">
-          <!-- Fixed left nav column -->
-          <div ng-include src="'app/component/leftnav.html'"></div>
-        </div>
-        <div class="col-md-10">
-          <!-- Breadcrumbs
-         ================================================== -->
-
-
-          <ng-view>Loading...</ng-view>
-
-        </div>
+      <div class="collapse navbar-collapse">
+        <div ng-include src="'app/security/login.html'"></div>
+        <ul class="nav navbar-nav navbar-right">
+          <li ng-class="{'active':currentLocale== 'en'}"><a href="" ng-click="changeLanguage('en')">EN </a></li>
+          <li ng-class="{'active':currentLocale== 'fr'}"><a href="" ng-click="changeLanguage('fr')">FR</a></li>
+        </ul>
       </div>
     </div>
+  </div>
 
 
-    <!-- In production use:
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-    -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <!-- Fixed left nav column -->
+        <div ng-include src="'app/component/leftnav.html'"></div>
+      </div>
+      <div class="col-md-10">
+        <!-- Breadcrumbs
+       ================================================== -->
 
-    </body>
+
+        <ng-view>Loading...</ng-view>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+
+  </body>
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
@@ -81,5 +79,5 @@
     <!-- endinject -->
     <!-- endbuild -->
 
-    </body>
-    </html>
+  </body>
+</html>

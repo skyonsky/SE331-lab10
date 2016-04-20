@@ -2,14 +2,12 @@ package camt.se331.shoppingcart.service;
 
 import camt.se331.shoppingcart.entity.Image;
 import camt.se331.shoppingcart.entity.Product;
-import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
 /**
  * Created by Dto on 2/7/2015.
  */
-@CrossOrigin
 public interface ProductService {
     List<Product> getProducts();
     Product getProduct(Long id);

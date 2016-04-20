@@ -17,13 +17,13 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
+/**
+ * Created by Shine on 20/4/2559.
+ */
 @Component
 public class AuthenticationTokenProcessingFilter extends GenericFilterBean {
     @Autowired
     private UserDetailsService userService;
-
-
-
     public AuthenticationTokenProcessingFilter()
     {
     }
@@ -75,4 +75,6 @@ public class AuthenticationTokenProcessingFilter extends GenericFilterBean {
 
         return authToken;
     }
+
 }
+

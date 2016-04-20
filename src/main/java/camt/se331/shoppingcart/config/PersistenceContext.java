@@ -16,7 +16,6 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaDialect;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
@@ -33,7 +32,6 @@ import java.util.Properties;
  *
  * @author Petri Kainulainen
  */
-@CrossOrigin
 @Configuration
 @EnableTransactionManagement(proxyTargetClass = true)
 @EnableJpaRepositories("camt.se331.shoppingcart.repository")
