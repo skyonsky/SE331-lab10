@@ -11,13 +11,11 @@ import java.util.Collection;
 import java.util.Set;
 
 /**
- * Created by SKY on 4/19/2016.
+ * Created by SKY on 4/20/2016.
  */
 public class SecurityUser extends User implements UserDetails {
-    private static final long serialVersionUID = 1L;
-
     public SecurityUser(User user) {
-        if (user != null) {
+        if(user != null) {
             this.setId(user.getId());
             this.setName(user.getName());
             this.setEmail(user.getEmail());
@@ -28,20 +26,19 @@ public class SecurityUser extends User implements UserDetails {
         }
     }
 
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         Collection<GrantedAuthority> authorities = new ArrayList<>();
         Set<Role> userRoles = this.getRoles();
-        if (userRoles != null) {
-            for (Role role : userRoles) {
+
+        if( userRoles != null ) {
+            for (Role role: userRoles) {
                 SimpleGrantedAuthority authority = new SimpleGrantedAuthority(role.getRoleName());
                 authorities.add(authority);
             }
         }
         return authorities;
     }
-
 
     @Override
     public boolean isAccountNonExpired() {
@@ -63,13 +60,12 @@ public class SecurityUser extends User implements UserDetails {
         return true;
     }
 
-    @Override
     public String getUsername() {
         return super.getUsername();
     }
 
-    @Override
     public String getPassword() {
         return super.getPassword();
     }
+
 }

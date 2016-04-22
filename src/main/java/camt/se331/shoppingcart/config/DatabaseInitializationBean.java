@@ -58,6 +58,7 @@ public class DatabaseInitializationBean implements InitializingBean {
         shoppingCartRepository.save(shoppingCart);
 
         // Add user
+
         Role adminRole = new Role("admin");
         Role userRole = new Role("user");
 

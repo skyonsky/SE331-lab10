@@ -16,7 +16,7 @@
           params: {'action': 'authenticate'},
           header: {'Content-Type': 'application/x-www-form-urlencoded'}
         }
-      })
+      });
   }
 
 })();

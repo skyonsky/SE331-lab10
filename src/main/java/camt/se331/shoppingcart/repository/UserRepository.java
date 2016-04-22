@@ -4,7 +4,7 @@ import camt.se331.shoppingcart.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
- * Created by SKY on 20/4/2559.
+ * Created by SKY on 4/20/2016.
  */
 public interface UserRepository extends JpaRepository<User,Long> {
     User findByEmail(String Email);
