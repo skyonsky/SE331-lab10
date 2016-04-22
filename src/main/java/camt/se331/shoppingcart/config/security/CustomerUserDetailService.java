@@ -9,7 +9,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by Shine on 20/4/2559.
+ * Created by SKY on 4/20/2016.
  */
 @Component
 public class CustomerUserDetailService implements UserDetailsService {

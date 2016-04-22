@@ -4,6 +4,7 @@ import camt.se331.shoppingcart.dao.ShoppingCartDao;
 import camt.se331.shoppingcart.entity.ShoppingCart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.transaction.Transactional;
 import java.util.Date;
@@ -12,6 +13,7 @@ import java.util.List;
 /**
  * Created by Dto on 4/6/2015.
  */
+@CrossOrigin
 @Service
 public class ShoppingCartServiceImpl implements ShoppingCartService{
 

@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
- * Created by Shine on 20/4/2559.
+ * Created by SKY on 4/20/2016.
  */
 @Component
 public class AuthenticationTokenProcessingFilter extends GenericFilterBean {

@@ -2,6 +2,7 @@ package camt.se331.shoppingcart.service.util;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.codec.Hex;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -9,6 +10,7 @@ import java.security.NoSuchAlgorithmException;
 /**
  * Created by SKY on 4/20/2016.
  */
+@CrossOrigin
 public class TokenUtils {
 
     public static final String MAGIC_KEY = "obfuscate";
